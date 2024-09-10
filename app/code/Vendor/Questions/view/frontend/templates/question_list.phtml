@@ -1,0 +1,9 @@
+<?php /** @var \Vendor\Questions\Block\QuestionList $block */ ?>
+<ul>
+    <?php foreach ($block->getQuestions() as $question): ?>
+        <li>
+            <strong><?php echo $question->getQuestion(); ?></strong><br>
+            <span><?php echo $question->getAnswer(); ?></span>
+        </li>
+    <?php endforeach; ?>
+</ul>
