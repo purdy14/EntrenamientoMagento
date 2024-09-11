@@ -8,5 +8,8 @@
         <constraint xsi:type="primary" referenceId="PRIMARY">
             <column name="question_id"/>
         </constraint>
-    x</table>
+    </table>
+    <table name="sales_order" resource="sales">
+        <column xsi:type="varchar" name="custom_field" nullable="true" length="255" comment="Custom Field"/>
+    </table>
 </schema>
