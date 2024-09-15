@@ -9,7 +9,20 @@
             <column name="question_id"/>
         </constraint>
     </table>
-    <table name="sales_order" resource="sales">
+    <table name="custom_order_data" resource="sales">
         <column xsi:type="varchar" name="custom_field" nullable="true" length="255" comment="Custom Field"/>
+    </table>
+   <table name="custom_order_data" resource="default" engine="innodb" comment="Custom Order Data Table">
+        <column name="entity_id" xsi:type="int" unsigned="true" nullable="false" identity="true">
+            <settings>
+                <auto_increment>true</auto_increment>
+                <primary>true</primary>
+            </settings>
+        </column>
+        <column name="sku" xsi:type="varchar" length="255" nullable="false"/>
+        <column name="increment_id" xsi:type="varchar" length="50" nullable="false"/>
+        <constraint xsi:type="primary" referenceId="PRIMARY">
+            <column name="entity_id"/>
+        </constraint>
     </table>
 </schema>
