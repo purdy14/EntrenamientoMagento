@@ -1,5 +1,5 @@
 <?php
-namespace Vendor\Questions\Setup;
+namespace Ntt\Questions\Setup;
 
 use Magento\Framework\Setup\InstallDataInterface;
 use Magento\Framework\Setup\ModuleDataSetupInterface;
@@ -14,6 +14,6 @@ class InstallData implements InstallDataInterface
             ['question' => 'How to install Magento?', 'answer' => 'You can install Magento via Composer or download the package.']
         ];
         
-        $setup->getConnection()->insertMultiple($setup->getTable('vendor_questions'), $data);
+        $setup->getConnection()->insertMultiple($setup->getTable('ntt_questions'), $data);
     }
 }

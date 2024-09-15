@@ -1,8 +1,8 @@
 <?php
-namespace Vendor\Questions\Block;
+namespace Ntt\Questions\Block;
 
 use Magento\Framework\View\Element\Template;
-use Vendor\Questions\Model\ResourceModel\Question\CollectionFactory;
+use Ntt\Questions\Model\ResourceModel\Question\CollectionFactory;
 
 class QuestionList extends Template
 {

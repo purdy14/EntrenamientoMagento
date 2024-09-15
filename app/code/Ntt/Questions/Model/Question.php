@@ -1,5 +1,5 @@
 <?php
-namespace Vendor\Questions\Model;
+namespace Ntt\Questions\Model;
 
 use Magento\Framework\Model\AbstractModel;
 
@@ -7,6 +7,6 @@ class Question extends AbstractModel
 {
     protected function _construct()
     {
-        $this->_init('Vendor\Questions\Model\ResourceModel\Question');
+        $this->_init('Ntt\Questions\Model\ResourceModel\Question');
     }
 }

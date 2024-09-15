@@ -1,5 +1,5 @@
 <?php
-namespace Vendor\QuestionAnswer\Controller\Index;
+namespace Ntt\QuestionAnswer\Controller\Index;
 
 use Magento\Framework\App\Action\Action;
 use Magento\Framework\App\Action\Context;
