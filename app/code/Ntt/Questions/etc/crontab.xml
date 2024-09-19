@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Module/etc/crontab.xsd">
+    <group id="default">
+        <job name="ntt_custom_command_cron" instance="Ntt\Questions\Cron\CustomCommand" method="execute">
+            <schedule>*\/5 * * * *</schedule> <!-- Ejecutar cada 5 minutos -->
+        </job>
+    </group>
+</config>
