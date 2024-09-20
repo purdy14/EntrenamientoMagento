@@ -1,0 +1,28 @@
+<?php
+/** @var \Magento\Catalog\Model\ResourceModel\Product\CollectionFactory|null $productCollectionFactory */
+$productCollectionFactory = $block->getProductCollectionFactory();
+
+if ($productCollectionFactory) {
+    $productCollection = $productCollectionFactory->create();
+    $productCollection->addAttributeToSelect('*');
+    $productCollection->setPageSize(5); // Limitar a 5 productos
+} else {
+    $productCollection = [];
+}
+
+?>
+
+<div class="custom-welcome-message">
+    <h1>¡Bienvenido a nuestra tienda!</h1>
+    <p>Estamos encantados de tenerte aquí. Echa un vistazo a algunos de nuestros productos destacados:</p>
+    
+    <ul class="product-list">
+        <?php foreach ($productCollection as $product): ?>
+            <li>
+                <h2><?php echo $product->getName(); ?></h2>
+                <p><?php echo $product->getShortDescription(); ?></p>
+                <p>Precio: <?php echo $product->getPrice(); ?> <?php echo $block->escapeHtml($product->getCurrencyCode()); ?></p>
+            </li>
+        <?php endforeach; ?>
+    </ul>
+</div>
