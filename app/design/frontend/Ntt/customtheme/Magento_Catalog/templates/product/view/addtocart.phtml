@@ -1,0 +1,31 @@
+<?php
+/** @var \Magento\Catalog\Block\Product\View $block */
+?>
+<form data-role="tocart-form" action="<?= $block->getAddToCartUrl($block->getProduct()) ?>" method="post">
+
+    <?= $block->getBlockHtml('formkey') ?>
+
+    <!-- Puedes agregar clases personalizadas aquí -->
+    <div class="product-options-bottom">
+        
+        <!-- Mensaje de éxito o error (puedes estilizar o personalizar) -->
+        <div id="messages_product_view"></div>
+
+        <!-- Puedes cambiar el texto del botón o agregar otros atributos -->
+        <button type="submit" 
+            title="<?= __('Buy Now') ?>" 
+            class="action primary tocart">
+            <span><?= __('Buy Now') ?></span>
+        </button>
+
+        <!-- Si tienes otras opciones del producto como cantidad, puedes añadirlas aquí -->
+        <?php if ($block->hasProductOptions()): ?>
+            <?= $block->getChildHtml('options_container') ?>
+        <?php endif; ?>
+
+        <?php if ($block->getChildHtml('addtocart')): ?>
+            <?= $block->getChildHtml('addtocart') ?>
+        <?php endif; ?>
+
+    </div>
+</form>
