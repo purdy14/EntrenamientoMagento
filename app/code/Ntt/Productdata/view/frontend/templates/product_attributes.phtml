@@ -1,0 +1,16 @@
+<?php
+$attributes = $block->getCustomAttributes();
+?>
+
+<?php if (!empty($attributes)): ?>
+    <div class="product-custom-attributes">
+        <h3>Custom Attributes</h3>
+        <ul>
+            <?php foreach ($attributes as $key => $value): ?>
+                <li><strong><?php echo $key; ?>:</strong> <?php echo $value ? $value : 'N/A'; ?></li>
+            <?php endforeach; ?>
+        </ul>
+    </div>
+<?php else: ?>
+    <p>No custom attributes found for this product.</p>
+<?php endif; ?>
