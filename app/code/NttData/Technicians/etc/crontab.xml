@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Cron/etc/crontab.xsd">
+    <group id="default">
+        <job name="send_technician_email" instance="NttData\Technicians\Cron\SendTechnicianEmail" method="execute">
+            <schedule>* * * * *</schedule> <!-- Cambia esto según tu necesidad -->
+        </job>
+    </group>
+</config>

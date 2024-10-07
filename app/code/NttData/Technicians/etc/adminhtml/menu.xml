@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="NttData_Technicians::manager" title="Technicians" module="NttData_Technicians" sortOrder="10" resource="NttData_Technicians::manager"/>
+        <add id="NttData_Technicians::add_row" title="Technicians" module="NttData_Technicians" sortOrder="20" parent="NttData_Technicians::manager" action="technicians/technician" resource="NttData_Technicians::add_row"/>
+    </menu>
+</config>

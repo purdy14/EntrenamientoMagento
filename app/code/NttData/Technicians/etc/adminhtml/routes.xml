@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Comerline_Company Module
+ *
+ * @category    Comerline
+ * @package     Comerline_Company
+ * @author      Comerline
+ *
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:App/etc/routes.xsd">
+    <router id="admin">
+        <route id="technicians" frontName="technicians">
+            <module name="NttData_Technicians" />
+        </route>
+    </router>
+</config>

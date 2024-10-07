@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
+    <table name="nttdata_technicians" resource="default" engine="innodb" comment="NttData Technicians">
+        <column xsi:type="int" name="id" nullable="false" identity="true" unsigned="true" comment="ID"/>
+        <column xsi:type="varchar" name="sku" nullable="false" length="50" comment="SKU"/>
+        <column xsi:type="varchar" name="nombre" nullable="false" length="255" comment="Nombre"/>
+        <column xsi:type="varchar" name="tecnico" nullable="false" length="50" comment="Técnico"/>
+        <column xsi:type="varchar" name="celular" nullable="false" length="20" comment="Celular"/>
+        <column xsi:type="varchar" name="correo" nullable="false" length="100" comment="Correo"/>
+        <column xsi:type="varchar" name="codigo" nullable="false" length="50" comment="Código"/>
+        <column xsi:type="varchar" name="dia" nullable="false" length="20" comment="Día"/>
+        <column xsi:type="varchar" name="semana" nullable="false" length="3" comment="Semana"/>
+        <column xsi:type="varchar" name="regional" nullable="false" length="50" comment="Regional"/>
+        <column xsi:type="boolean" name="status" nullable="false" default="1" comment="Estado"/>
+        <column xsi:type="datetime" name="created_at" nullable="false" default="CURRENT_TIMESTAMP" comment="Fecha de Creación"/>
+        <column xsi:type="datetime" name="updated_at" nullable="false" default="CURRENT_TIMESTAMP" on_update="true" comment="Fecha de Actualización"/>
+        <constraint xsi:type="primary" referenceId="PRIMARY">
+            <column name="id"/>
+        </constraint>
+    </table>
+    <table name="sales_order" resource="sales">
+        <column xsi:type="smallint" name="processed" nullable="false" default="0" comment="Processed Flag"/>
+    </table>
+</schema>

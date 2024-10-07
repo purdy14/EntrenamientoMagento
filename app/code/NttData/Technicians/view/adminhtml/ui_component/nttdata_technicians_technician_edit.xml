@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+/**
+ * NttData_Technicians Module
+ *
+ * @category    NttData
+ * @package     NttData_Technicians
+ */
+-->
+<form xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Ui:etc/ui_configuration.xsd">
+    <argument name="data" xsi:type="array">
+        <item name="js_config" xsi:type="array">
+            <item name="provider" xsi:type="string">nttdata_technicians_technician_edit.technician_form_data_source</item>
+            <item name="deps" xsi:type="string">nttdata_technicians_technician_edit.technician_form_data_source</item>
+        </item>
+        <item name="label" xsi:type="string" translate="true">Technician</item>
+        <item name="layout" xsi:type="array">
+            <item name="type" xsi:type="string">tabs</item>
+        </item>
+        <item name="buttons" xsi:type="array">
+            <item name="back" xsi:type="string">NttData\Technicians\Block\Adminhtml\Edit\Buttons\BackButton</item>
+            <item name="delete" xsi:type="string">NttData\Technicians\Block\Adminhtml\Edit\Buttons\DeleteButton</item>
+            <item name="reset" xsi:type="string">NttData\Technicians\Block\Adminhtml\Edit\Buttons\ResetButton</item>
+            <item name="save" xsi:type="string">NttData\Technicians\Block\Adminhtml\Edit\Buttons\SaveButton</item>
+        </item>
+    </argument>
+    <dataSource name="technician_form_data_source">
+        <argument name="dataProvider" xsi:type="configurableObject">
+            <argument name="class" xsi:type="string">NttData\Technicians\Model\Technician\DataProvider</argument>
+            <argument name="name" xsi:type="string">technician_form_data_source</argument>
+            <argument name="primaryFieldName" xsi:type="string">id</argument>
+            <argument name="requestFieldName" xsi:type="string">id</argument>
+        </argument>
+        <argument name="data" xsi:type="array">
+            <item name="js_config" xsi:type="array">
+                <item name="component" xsi:type="string">Magento_Ui/js/form/provider</item>
+                <item name="submit_url" path="*/*/edit" xsi:type="url"/>
+            </item>
+        </argument>
+    </dataSource>
+    <fieldset name="technician">
+        <argument name="data" xsi:type="array">
+            <item name="config" xsi:type="array">
+                <item name="label" xsi:type="string" translate="true">Technician Details</item>
+            </item>
+        </argument>
+        <field name="id">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="visible" xsi:type="boolean">false</item>
+                    <item name="dataType" xsi:type="string">text</item>
+                    <item name="formElement" xsi:type="string">input</item>
+                    <item name="source" xsi:type="string">technician</item>
+                </item>
+            </argument>
+        </field>
+        <field name="sku" formElement="input">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="label" translate="true" xsi:type="string">SKU</item>
+                    <item name="fit" xsi:type="boolean">false</item>
+                    <item name="sortOrder" xsi:type="string">10</item>
+                    <item name="source" xsi:type="string">technician</item>
+                    <item name="validation" xsi:type="array">
+                        <item name="required-entry" xsi:type="boolean">true</item>
+                    </item>
+                </item>
+            </argument>
+        </field>
+        <field name="nombre" formElement="input">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="label" translate="true" xsi:type="string">Technician Name</item>
+                    <item name="fit" xsi:type="boolean">false</item>
+                    <item name="sortOrder" xsi:type="string">20</item>
+                    <item name="source" xsi:type="string">technician</item>
+                    <item name="validation" xsi:type="array">
+                        <item name="required-entry" xsi:type="boolean">true</item>
+                    </item>
+                </item>
+            </argument>
+        </field>
+        <field name="celular" formElement="input">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="label" translate="true" xsi:type="string">Technician Cellphone</item>
+                    <item name="fit" xsi:type="boolean">false</item>
+                    <item name="sortOrder" xsi:type="string">30</item>
+                    <item name="source" xsi:type="string">technician</item>
+                    <item name="validation" xsi:type="array">
+                        <item name="required-entry" xsi:type="boolean">true</item>
+                    </item>
+                </item>
+            </argument>
+        </field>
+        <field name="correo" formElement="input">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="label" translate="true" xsi:type="string">Technician Email</item>
+                    <item name="fit" xsi:type="boolean">false</item>
+                    <item name="sortOrder" xsi:type="string">40</item>
+                    <item name="source" xsi:type="string">technician</item>
+                    <item name="validation" xsi:type="array">
+                        <item name="required-entry" xsi:type="boolean">true</item>
+                    </item>
+                </item>
+            </argument>
+        </field>
+        <field name="codigo" formElement="input">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="label" translate="true" xsi:type="string">Technician Code</item>
+                    <item name="fit" xsi:type="boolean">false</item>
+                    <item name="sortOrder" xsi:type="string">50</item>
+                    <item name="source" xsi:type="string">technician</item>
+                    <item name="validation" xsi:type="array">
+                        <item name="required-entry" xsi:type="boolean">true</item>
+                    </item>
+                </item>
+            </argument>
+        </field>
+        <field name="dia" formElement="input">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="label" translate="true" xsi:type="string">Day of the Week</item>
+                    <item name="fit" xsi:type="boolean">false</item>
+                    <item name="sortOrder" xsi:type="string">60</item>
+                    <item name="source" xsi:type="string">technician</item>
+                </item>
+            </argument>
+        </field>
+       <field name="regional" formElement="input">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="label" translate="true" xsi:type="string">Regional</item>
+                    <item name="fit" xsi:type="boolean">false</item>
+                    <item name="sortOrder" xsi:type="string">60</item>
+                    <item name="source" xsi:type="string">technician</item>
+                </item>
+            </argument>
+        </field>
+    </fieldset>
+</form>
